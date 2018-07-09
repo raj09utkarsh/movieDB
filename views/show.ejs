@@ -1,0 +1,48 @@
+<% include partials/header %>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <img src="<%= data.Poster %>">
+        </div>
+        <div class="col-md-8">
+            <h1><%= data.Title %></h1>
+            <table style="margin-top: 20px;">
+                <tr>
+                    <th>Ratings</th>
+                    <td><%= data.imdbRating %></td>
+                </tr>
+                <tr>
+                    <th>Year</th>
+                    <td><%= data.Year %></td>
+                </tr>
+                <tr>
+                    <th>Date</th>
+                    <td><%= data.Released %></td>
+                </tr>
+                <tr>
+                    <th>Runtime</th>
+                    <td><%= data.Runtime %></td>
+                </tr>
+                <tr>
+                    <th>Genre</th>
+                    <td><%= data.Genre %></td>
+                </tr>
+                <tr>
+                    <th>Director</th>
+                    <td><%= data.Director %></td>
+                </tr>
+                <tr>
+                    <th>Actors</th>
+                    <td><%= data.Actors %></td>
+                </tr>
+                <tr>
+                    <th>Plot</th>
+                    <td><%= data.Plot %></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+<% include partials/footer %>
