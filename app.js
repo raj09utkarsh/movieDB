@@ -17,7 +17,12 @@ app.get("/results", function(req, res){
             res.redirect("/");
         }else if(!err && response.statusCode==200){
             var parsedData = JSON.parse(body);
-            res.render("index", {data: parsedData});
+            if(parsedData === undefined){
+                res.redirect("/");
+            }
+            else{
+                res.render("index", {data: parsedData});
+            }
         }
     });
 });
