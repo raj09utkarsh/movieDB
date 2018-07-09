@@ -4,6 +4,7 @@ var app = express();
 
 app.set("view engine", "ejs");
 app.use(express.static("public"));
+app.set('port', (process.env.PORT  || 3000));
 
 app.get("/", function(req, res){
     res.render("search");
@@ -34,6 +35,6 @@ app.get("/results/:id", function(req, res){
     });
 });
 
-app.listen(3000, function(){
+app.listen(app.get('port'), function(){
     console.log("Server has started!");
 });
