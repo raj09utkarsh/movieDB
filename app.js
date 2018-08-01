@@ -11,7 +11,7 @@ app.get("/", function(req, res){
 });
 
 app.get("/results", function(req, res){
-    request("http://www.omdbapi.com/?s=" + req.query.search + "&apikey=5ded979c", function(err, response, body){
+    request("http://www.omdbapi.com/?s=" + req.query.search + "&apikey=[ENTER AN API KEY]", function(err, response, body){
         if(err){
             console.log("Error");
             res.redirect("/");
